@@ -1,50 +1,86 @@
-# React + TypeScript + Vite
+# E-commerce Application — Deco Cerámicas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern e-commerce platform built with **React**, **TypeScript**, and **Vite**, featuring a product catalog with API integration.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📦 Product catalog with API integration
+- 🛒 Shopping cart functionality
+- 📱 Responsive design
+- 🔍 Product browsing and filtering
+- 📝 Form validation with Zod
 
-## Expanding the ESLint configuration
+## 🧰 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React** - 
+- **TypeScript** - 
+- **Vite** - 
+- **React Router DOM** - 
+- **React Hook Form** - 
+- **Zod** - 
 
-- Configure the top-level `parserOptions` property like this:
+## 📦 Getting Started
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Prerequisites
+
+- Node.js **v18+**
+- npm or yarn
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/Camilo-tsx/fe-deco-ceramicas
+cd fe-deco-ceramicas
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Open your browser and navigate to the local URL provided by Vite.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 📜 Available Scripts
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
+
+## 📁 Project Structure
+
+src/
+├── routes/         # Route configuration
+├── assets/         # Static assets
+├── components/     # Application components
+├── constants/      # Application constants
+├── context/        # React Context providers
+├── hooks/          # Custom React hooks
+├── pages/          # Page components
+├── App.css         # Main app styles
+├── App.tsx         # Main application component
+├── index.css       # Global styles
+└── main.tsx        # Application entry point
+
+## 🗺️ Roadmap
+
+Future implementations planned for this project:
+
+-  Payment system integration
+-  Cloud image storage (images will be stored in the cloud and URLs will be served from the database)
+-  User authentication
+-  Order history
+-  Admin dashboard
+
+## 📝 Notes
+
+This project uses **Zod** for form validation primarily as a demonstration of its capabilities. For production applications with a single form, vanilla validation might be more appropriate. However, Zod provides excellent type safety and scalability for future form additions.
+
+## 📄 License
+
+MIT
+
+---
