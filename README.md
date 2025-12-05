@@ -50,21 +50,6 @@ Open your browser and navigate to the local URL provided by Vite.
 | `npm run preview` | Preview production build |
 | `npm run lint` | Run ESLint |
 
-## 📁 Project Structure
-
-src/
-├── routes/         # Route configuration
-├── assets/         # Static assets
-├── components/     # Application components
-├── constants/      # Application constants
-├── context/        # React Context providers
-├── hooks/          # Custom React hooks
-├── pages/          # Page components
-├── App.css         # Main app styles
-├── App.tsx         # Main application component
-├── index.css       # Global styles
-└── main.tsx        # Application entry point
-
 ## 🗺️ Roadmap
 
 Future implementations planned for this project:
