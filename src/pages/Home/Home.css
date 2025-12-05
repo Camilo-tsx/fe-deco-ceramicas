@@ -1,0 +1,181 @@
+.global-background-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* Background Containers */
+.firstbackground-container,
+.secondbackground-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+@media (100px <= width <= 916px) {
+  .firstbackground-container,
+  .secondbackground-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+    padding: 0;
+  }
+}
+
+/* Image Containers */
+.artistic-image-container,
+.living-image-container,
+.accesories-image-container,
+.kitchen-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  position: relative;
+  margin-bottom: 0.3rem;
+  margin-left: 0;
+  margin-right: 0.3rem;
+  color: beige;
+  cursor: pointer;
+  overflow: hidden;
+  border: solid 1.5px black;
+}
+
+@media (100px <= width <= 916px) {
+  .global-background-container .artistic-image-container,
+  .global-background-container .living-image-container,
+  .global-background-container .accesories-image-container,
+  .global-background-container .kitchen-image-container {
+    width: 100%;
+  }
+}
+
+/* Images */
+.artistic-image-container img,
+.living-image-container img,
+.accesories-image-container img,
+.kitchen-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Overlay */
+.artistic-image-container::before,
+.living-image-container::before,
+.accesories-image-container::before,
+.kitchen-image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Fondo negro semitransparente */
+  z-index: 1;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+/* Headings h2 */
+.global-background-container h2 {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  font-family: "Raleway", serif;
+  text-align: center;
+  border: solid 1px beige;
+  font-weight: 350;
+  width: 35%;
+  height: 4.5rem;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  transition:
+    background-color 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  background-color: transparent; /* Sin fondo por defecto */
+}
+
+@media (916px <= width <= 1441px) {
+  .global-background-container .artistic-image-container h2,
+  .global-background-container .living-image-container h2,
+  .global-background-container .accesories-image-container h2,
+  .global-background-container .kitchen-image-container h2 {
+    width: 54%;
+    height: 25%;
+  }
+}
+
+@media (100px <= width <= 916px) {
+  .global-background-container .artistic-image-container h2,
+  .global-background-container .living-image-container h2,
+  .global-background-container .accesories-image-container h2,
+  .global-background-container .kitchen-image-container h2 {
+    width: 70%;
+    height: 30%;
+  }
+}
+
+/* Headings h3 */
+.global-background-container h3 {
+  position: absolute;
+  top: 60%;
+  z-index: 2;
+  font-family: "Raleway", serif;
+  color: beige;
+  text-decoration: underline;
+  text-underline-offset: 0.4rem;
+  font-size: 0.8rem;
+}
+
+@media (916px <= width <= 1441px) {
+  .global-background-container .artistic-image-container h3,
+  .global-background-container .living-image-container h3,
+  .global-background-container .accesories-image-container h3,
+  .global-background-container .kitchen-image-container h3 {
+    top: 65%;
+  }
+}
+
+@media (100px <= width <= 916px) {
+  .global-background-container .artistic-image-container h3,
+  .global-background-container .living-image-container h3,
+  .global-background-container .accesories-image-container h3,
+  .global-background-container .kitchen-image-container h3 {
+    font-size: 0.7rem;
+    top: 70%;
+  }
+}
+
+/* Hover Effects */
+.artistic-image-container:hover::before,
+.living-image-container:hover::before,
+.accesories-image-container:hover::before,
+.kitchen-image-container:hover::before {
+  opacity: 0;
+}
+
+.artistic-image-container:hover img,
+.living-image-container:hover img,
+.accesories-image-container:hover img,
+.kitchen-image-container:hover img {
+  transform: scale(1.1);
+}
+
+.artistic-image-container:hover h2,
+.living-image-container:hover h2,
+.accesories-image-container:hover h2,
+.kitchen-image-container:hover h2 {
+  background-color: rgba(0, 0, 0, 0.4);
+}

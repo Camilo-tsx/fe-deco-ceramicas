@@ -1,0 +1,87 @@
+.header-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: shrinkToHeader 2s ease-in-out forwards;
+}
+
+.logo-transition {
+  width: 150px;
+  animation: shrinkLogo 2s ease-in-out forwards;
+}
+
+@keyframes shrinkToHeader {
+  0% {
+    height: 100vh;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1) 10%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+  }
+
+  20% {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1) 12%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+  }
+
+  40% {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1) 14%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+  }
+  60% {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1) 16%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+  }
+  80% {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1) 18%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+  }
+  100% {
+    height: 3.9rem;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1) 20%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+  }
+}
+
+@keyframes shrinkLogo {
+  from {
+    width: 20rem;
+  }
+  to {
+    width: 14%;
+  }
+}
+
+@media (100px <= width <= 916px) {
+  @keyframes shrinkLogo {
+    0% {
+      width: 15rem;
+    }
+    100% {
+      width: 30%;
+    }
+  }
+}
